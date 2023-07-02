@@ -57,7 +57,7 @@ ________________________________________________________________________________
 ####  **Languages**
 * **English**: Intermediate
 * **Russian**: Native
-* **Ukrainian**: : Upper- Intermediate
+* **Ukrainian**: : Upper-Intermediate
 
 
 
