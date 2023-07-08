@@ -2,9 +2,94 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>CV</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 <body>
-
+<h1>Anastasiia Prokofieva</h1>
+<h3>Junior PHP developer</h3>
+<h2>Contacts</h2>
+<ul class="list-group">
+    <li class="list-group-item">Skype: <a href="skype:anastasiya_skypik?chat">anastasiya_skypik</a></li>
+    <li class="list-group-item">E-mail: <a href="mailto:anastasia.beetroot@gmail.com">anastasia.beetroot@gmail.com</a>
+    </li>
+    <li class="list-group-item">GitHub : <a
+            href="https://github.com/AnastasiaProkofieva">github.com/AnastasiaProkofieva</a></li>
+    <li class="list-group-item">Discord: Anastasia_P#5121</li>
+</ul>
+<h2>Profile</h2>
+<p>Motivated junior PHP developer has completed courses, looking for an internship, ready for further improvement of his
+    knowledge and skills</p>
+<h2>Skills</h2>
+<ul class="list-group">
+    <li class="list-group-item">PHP</li>
+    <li class="list-group-item">Symphony</li>
+    <li class="list-group-item">Docker, Vagrant</li>
+    <li class="list-group-item">MySQL</li>
+    <li class="list-group-item">Git</li>
+</ul>
+<h2>Code Examples</h2>
+<pre>
+<code>
+    if (!empty($_GET['sort'])) {
+    switch ($_GET['sort']) {
+    case 'id':
+    if (!empty($_GET['order']) && $_GET['order'] == 'desc') {
+    krsort($users);
+    } else {
+    ksort($users);
+    }
+    $users = array_values($users);
+    break;
+    case 'name':
+    case 'surname':
+    case 'age':
+    usort($users, 'sortFieldsAnother');
+    break;
+    }
+    }
+</code>
+</pre>
+<h2>Projects</h2>
+<ul class="list-group list-group-numbered">
+    <li class="list-group-item">Bookstore
+        <ul>
+            <li>Description: Bookstore(Pages are as follows: catalog, card of one book,cart). Admin panel makes the
+                possibility to edit, delete a book, view a list of books and orders. Also customers are able to leave
+                comments and view them.
+            </li>
+            <li>Stack: MySQL, PHP, Docker, HTML, CSS.</li>
+            <li><a href="https://github.com/AnastasiaProkofieva/bookstore">Link to project</a></li>
+        </ul>
+    </li>
+    <li class="list-group-item">Shop (Electro store)
+        <ul>
+            <li>Description: website for goods sale(Main page with a list of products on sale ( is formed in the admin
+                panel);
+                Authorization/Authentication for site clients; The product page consists of: product image, product
+                descriptions, add to cart button; Cart page includes a list of all products in the user s shopping cart
+                and
+                order button what creates an order and sends an email; CMS. Admin panel makes possibility to create,
+                edit,
+                delete a product, view a list of products).
+            </li>
+            <li>Stack: MySQL, PHP, Docker, HTML, CSS, Symphony.</li>
+            <li>Code: <a href="https://github.com/AnastasiaProkofieva/Shop/tree/master"> Link to project</a></li>
+        </ul>
+    </li>
+</ul>
+<h2>Education</h2>
+<ul>
+    <li>Back-End (PHP, Symphony), Beetroot Academy/Odessa (April 2020 - August 2020)</li>
+    <li>Frontend Basic, Hillel /Odessa (January 2018 - March 2018)</li>
+</ul>
+<h2>Languages</h2>
+<ul>
+    <li>English: Intermediate</li>
+    <li>Russian: Native</li>
+    <li>Ukrainian: : Upper- Intermediate</li>
+</ul>
 </body>
 </html>
