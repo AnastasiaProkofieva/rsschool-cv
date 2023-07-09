@@ -1,95 +1,345 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="icon" href="assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body>
-<h1>Anastasiia Prokofieva</h1>
-<h3>Junior PHP developer</h3>
-<h2>Contacts</h2>
-<ul class="list-group">
-    <li class="list-group-item">Skype: <a href="skype:anastasiya_skypik?chat">anastasiya_skypik</a></li>
-    <li class="list-group-item">E-mail: <a href="mailto:anastasia.beetroot@gmail.com">anastasia.beetroot@gmail.com</a>
-    </li>
-    <li class="list-group-item">GitHub : <a
-            href="https://github.com/AnastasiaProkofieva">github.com/AnastasiaProkofieva</a></li>
-    <li class="list-group-item">Discord: Anastasia_P#5121</li>
-</ul>
-<h2>Profile</h2>
-<p>Motivated junior PHP developer has completed courses, looking for an internship, ready for further improvement of his
-    knowledge and skills</p>
-<h2>Skills</h2>
-<ul class="list-group">
-    <li class="list-group-item">PHP</li>
-    <li class="list-group-item">Symphony</li>
-    <li class="list-group-item">Docker, Vagrant</li>
-    <li class="list-group-item">MySQL</li>
-    <li class="list-group-item">Git</li>
-</ul>
-<h2>Code Examples</h2>
-<pre>
-<code>
-    if (!empty($_GET['sort'])) {
-    switch ($_GET['sort']) {
-    case 'id':
-    if (!empty($_GET['order']) &amp;&amp; $_GET['order'] == 'desc') {
-    krsort($users);
-    } else {
-    ksort($users);
-    }
-    $users = array_values($users);
-    break;
-    case 'name':
-    case 'surname':
-    case 'age':
-    usort($users, 'sortFieldsAnother');
-    break;
-    }
-    }
-</code>
-</pre>
-<h2>Projects</h2>
-<ul class="list-group list-group-numbered">
-    <li class="list-group-item">Bookstore
-        <ul>
-            <li>Description: Bookstore(Pages are as follows: catalog, card of one book,cart). Admin panel makes the
-                possibility to edit, delete a book, view a list of books and orders. Also customers are able to leave
-                comments and view them.
+<body class="body-wrapper">
+
+<header class="page-header">
+    <nav>
+        <ul class="nav__list">
+            <li class="nav__item">
+                <a class="nav__link" href="#profile">Profile</a>
             </li>
-            <li>Stack: MySQL, PHP, Docker, HTML, CSS.</li>
-            <li><a href="https://github.com/AnastasiaProkofieva/bookstore">Link to project</a></li>
-        </ul>
-    </li>
-    <li class="list-group-item">Shop (Electro store)
-        <ul>
-            <li>Description: website for goods sale(Main page with a list of products on sale ( is formed in the admin
-                panel);
-                Authorization/Authentication for site clients; The product page consists of: product image, product
-                descriptions, add to cart button; Cart page includes a list of all products in the user s shopping cart
-                and
-                order button what creates an order and sends an email; CMS. Admin panel makes possibility to create,
-                edit,
-                delete a product, view a list of products).
+            <li class="nav__item">
+                <a class="nav__link" href="#contacts">Contacts</a></li>
+            <li class="nav__item">
+                <a class="nav__link" href="#skills">Skills</a>
             </li>
-            <li>Stack: MySQL, PHP, Docker, HTML, CSS, Symphony.</li>
-            <li>Code: <a href="https://github.com/AnastasiaProkofieva/Shop/tree/master"> Link to project</a></li>
+            <li class="nav__item">
+                <a class="nav__link" href="#education">Education</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="#projects">Projects</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="#examples">Code Examples</a>
+            </li>
+            <li class="nav__item">
+                <a class="nav__link" href="#languages">Languages</a>
+            </li>
         </ul>
-    </li>
-</ul>
-<h2>Education</h2>
-<ul>
-    <li>Back-End (PHP, Symphony), Beetroot Academy/Odessa (April 2020 - August 2020)</li>
-    <li>Frontend Basic, Hillel /Odessa (January 2018 - March 2018)</li>
-</ul>
-<h2>Languages</h2>
-<ul>
-    <li>English: Intermediate</li>
-    <li>Russian: Native</li>
-    <li>Ukrainian: : Upper- Intermediate</li>
-</ul>
+    </nav>
+</header>
+<main class="main-container">
+    <div class="left-side">
+        <div class="content-list">
+            <figure>
+                <img class="author-photo" src="./assets/photo.png" alt="Anastasiya's photo">
+            </figure>
+            <section class="section-item" id="contacts">
+                <h2 class="section-header">
+                    Contacts
+                </h2>
+                <ul class="section-content">
+                    <li class="section-content-item">
+                        <svg class="icon" height="20px" viewBox="0 0 448 512">
+                            <path d="M424.7 299.8c2.9-14 4.7-28.9 4.7-43.8 0-113.5-91.9-205.3-205.3-205.3-14.9 0-29.7 1.7-43.8 4.7C161.3 40.7 137.7 32 112 32 50.2 32 0 82.2 0 144c0 25.7 8.7 49.3 23.3 68.2-2.9 14-4.7 28.9-4.7 43.8 0 113.5 91.9 205.3 205.3 205.3 14.9 0 29.7-1.7 43.8-4.7 19 14.6 42.6 23.3 68.2 23.3 61.8 0 112-50.2 112-112 .1-25.6-8.6-49.2-23.2-68.1zm-194.6 91.5c-65.6 0-120.5-29.2-120.5-65 0-16 9-30.6 29.5-30.6 31.2 0 34.1 44.9 88.1 44.9 25.7 0 42.3-11.4 42.3-26.3 0-18.7-16-21.6-42-28-62.5-15.4-117.8-22-117.8-87.2 0-59.2 58.6-81.1 109.1-81.1 55.1 0 110.8 21.9 110.8 55.4 0 16.9-11.4 31.8-30.3 31.8-28.3 0-29.2-33.5-75-33.5-25.7 0-42 7-42 22.5 0 19.8 20.8 21.8 69.1 33 41.4 9.3 90.7 26.8 90.7 77.6 0 59.1-57.1 86.5-112 86.5z"/>
+                        </svg>
+                        <a class="section-content-link"
+                           href="skype:anastasiya_skypik?chat">anastasiya_skypik</a>
+                    </li>
+                    <li class="section-content-item">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 512 512">
+                            <path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48H48zM0 176V384c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V176L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/>
+                        </svg>
+                        <a class="section-content-link"
+                           href="mailto:anastasia.beetroot@gmail.com">anastasia.beetroot@gmail.com</a>
+                    </li>
+                    <li class="section-content-item">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 496 512">
+                            <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+                        </svg>
+                        <a class="section-content-link"
+                           href="https://github.com/AnastasiaProkofieva">github.com/AnastasiaProkofieva</a>
+                    </li>
+                    <li class="section-content-item">
+                        <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 640 512">
+                            <path d="M524.531,69.836a1.5,1.5,0,0,0-.764-.7A485.065,485.065,0,0,0,404.081,32.03a1.816,1.816,0,0,0-1.923.91,337.461,337.461,0,0,0-14.9,30.6,447.848,447.848,0,0,0-134.426,0,309.541,309.541,0,0,0-15.135-30.6,1.89,1.89,0,0,0-1.924-.91A483.689,483.689,0,0,0,116.085,69.137a1.712,1.712,0,0,0-.788.676C39.068,183.651,18.186,294.69,28.43,404.354a2.016,2.016,0,0,0,.765,1.375A487.666,487.666,0,0,0,176.02,479.918a1.9,1.9,0,0,0,2.063-.676A348.2,348.2,0,0,0,208.12,430.4a1.86,1.86,0,0,0-1.019-2.588,321.173,321.173,0,0,1-45.868-21.853,1.885,1.885,0,0,1-.185-3.126c3.082-2.309,6.166-4.711,9.109-7.137a1.819,1.819,0,0,1,1.9-.256c96.229,43.917,200.41,43.917,295.5,0a1.812,1.812,0,0,1,1.924.233c2.944,2.426,6.027,4.851,9.132,7.16a1.884,1.884,0,0,1-.162,3.126,301.407,301.407,0,0,1-45.89,21.83,1.875,1.875,0,0,0-1,2.611,391.055,391.055,0,0,0,30.014,48.815,1.864,1.864,0,0,0,2.063.7A486.048,486.048,0,0,0,610.7,405.729a1.882,1.882,0,0,0,.765-1.352C623.729,277.594,590.933,167.465,524.531,69.836ZM222.491,337.58c-28.972,0-52.844-26.587-52.844-59.239S193.056,219.1,222.491,219.1c29.665,0,53.306,26.82,52.843,59.239C275.334,310.993,251.924,337.58,222.491,337.58Zm195.38,0c-28.971,0-52.843-26.587-52.843-59.239S388.437,219.1,417.871,219.1c29.667,0,53.307,26.82,52.844,59.239C470.715,310.993,447.538,337.58,417.871,337.58Z"/>
+                        </svg>
+                        <span
+                                class="section-content-block">Anastasia_P#5121</span></li>
+                </ul>
+            </section>
+            <section class="section-item" id="skills">
+                <h2 class="section-header">Skills</h2>
+                <ul class="section-content">
+                    <li class="section-content-item">PHP</li>
+                    <li class="section-content-item">Symphony</li>
+                    <li class="section-content-item">Docker, Vagrant</li>
+                    <li class="section-content-item">MySQL</li>
+                    <li class="section-content-item">Git</li>
+                </ul>
+            </section>
+            <section class="section-item" id="languages">
+                <h2 class="section-header">Languages</h2>
+                <ul class="section-content">
+                    <li class="section-content-item">English: <span class="section-content-inner">Intermediate</span>
+                    </li>
+                    <li class="section-content-item">Russian: <span class="section-content-inner">Native</span></li>
+                    <li class="section-content-item">Ukrainian: <span
+                            class="section-content-inner">Upper-Intermediate</span></li>
+                </ul>
+            </section>
+        </div>
+
+    </div>
+    <div class="right-side">
+        <section class="initials">
+            <h1 class="name">Anastasiia Prokofieva</h1>
+            <p class="profession">Junior PHP developer</p>
+        </section>
+        <section id="profile">
+            <h2 class="section-header">Profile</h2>
+            <p class="profile-content">Motivated junior PHP developer has completed courses, looking for an internship,
+                ready for further improvement of his knowledge and skills.
+            </p>
+        </section>
+        <section id="education">
+            <h2 class="section-header">Education</h2>
+            <ul class="section-content">
+                <li>
+                    <div class="section-content-item">April 2020 - August 2020</div>
+                    <div>Back-End (PHP, Symphony), Beetroot Academy/Odessa</div>
+                </li>
+                <li>
+                    <div class="section-content-item">January 2018 - March 2018</div>
+                    <div>Frontend Basic, Hillel /Odessa</div>
+                </li>
+            </ul>
+        </section>
+        <section id="examples">
+            <h2 class="section-header">Code Examples</h2>
+            <pre>
+                <code>
+        if (!empty($_GET['sort'])) {
+            switch ($_GET['sort']) {
+                case 'id':
+                    if (!empty($_GET['order']) &amp;&amp; $_GET['order'] == 'desc') {
+                        krsort($users);
+                    } else {
+                        ksort($users);
+                    }
+                    $users = array_values($users);
+                    break;
+                case 'name':
+                case 'surname':
+                case 'age':
+                    usort($users, 'sortFieldsAnother');
+                    break;
+            }
+        }
+                </code>
+            </pre>
+        </section>
+        <section id="projects">
+            <h2 class="section-header">Projects</h2>
+            <div class="projects-container">
+                <a class="project-card" href="https://github.com/AnastasiaProkofieva/bookstore" target="_blank">
+                    <div class="project-card__title">Bookstore</div>
+                    <div class="project-card__content">
+                        <div class="project-card__item">
+                            <div class="project-card__item-title">Description</div>
+                            <div class="project-card__item-description">Bookstore(Pages are as follows: catalog, card of
+                                one
+                                book,cart). Admin panel
+                                makes the possibility to edit, delete a book, view a list of books and orders. Also
+                                customers are able
+                                to leave comments and view them.
+                            </div>
+                        </div>
+                        <div class="project-card__item">
+                            <div class="project-card__item-title">Stack:</div>
+                            <div class="project-card__item-description">MySQL, PHP, Docker, HTML, CSS.
+                            </div>
+                        </div>
+
+                    </div>
+                </a>
+                <a class="project-card" href="https://github.com/AnastasiaProkofieva/Shop/tree/master" target="_blank">
+                    <div class="project-card__title">Shop (Electro store)</div>
+                    <div class="project-card__content">
+                        <div class="project-card__item">
+                            <div class="project-card__item-title">Description</div>
+                            <div class="project-card__item-description">Website for goods sale(Main page with a list of
+                                products on sale ( is formed in
+                                the admin panel);
+                                Authorization/Authentication for site clients; The product page consists of: product
+                                image,
+                                product
+                                descriptions, add to cart button; Cart page includes a list of all products in the users
+                                shopping cart
+                                and
+                                order button what creates an order and sends an email; CMS. Admin panel makes
+                                possibility to
+                                create,
+                                edit,
+                                delete a product, view a list of products).
+                            </div>
+                        </div>
+                        <div class="project-card__item">
+                            <div class="project-card__item-title">Stack:</div>
+                            <div class="project-card__item-description">MySQL, PHP, Docker, HTML, CSS, Symphony.
+                            </div>
+                        </div>
+
+                    </div>
+                </a>
+            </div>
+        </section>
+    </div>
+</main>
+<footer class="footer">
+    <div class="my-git-inner">
+        <svg class="icon" xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 0 496 512">
+            <path fill="#fd9f13"
+                  d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+        </svg>
+        <a class="my-git-link" href="https://github.com/AnastasiaProkofieva" target="_blank">My Github link</a>
+    </div>
+    <div class="footer-year">2023</div>
+    <a href="https://rs.school/js/" target="_blank">
+        <svg height="25px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1"
+             viewBox="0 0 552.8 205.3">
+            <style>.st0 {
+                fill: #fff
+            }
+
+            .st1 {
+                clip-path: url(#SVGID_2_)
+            }
+
+            .st2 {
+                clip-path: url(#SVGID_4_)
+            }
+
+            .st3 {
+                clip-path: url(#SVGID_6_)
+            }
+
+            .st4 {
+                clip-path: url(#SVGID_8_)
+            }
+
+            .st5 {
+                fill: #fff;
+                stroke: #000;
+                stroke-width: 4;
+                stroke-miterlimit: 10
+            }
+
+            .st6 {
+                clip-path: url(#SVGID_8_)
+            }
+
+            .st6, .st7 {
+                fill: none;
+                stroke: #000;
+                stroke-width: 4;
+                stroke-miterlimit: 10
+            }
+
+            .st8, .st9 {
+                clip-path: url(#SVGID_10_)
+            }
+
+            .st9 {
+                fill: none;
+                stroke: #000;
+                stroke-width: 4;
+                stroke-miterlimit: 10
+            }</style>
+            <title>rs_school_js</title>
+            <path fill="#fd9f13"
+                  d="M285.4 68l26.3-1.7c.6 4.3 1.7 7.5 3.5 9.8 2.9 3.6 6.9 5.4 12.2 5.4 3.9 0 7-.9 9.1-2.8 2-1.5 3.2-3.9 3.2-6.4 0-2.4-1.1-4.7-3-6.2-2-1.8-6.7-3.6-14.1-5.2-12.1-2.7-20.8-6.3-25.9-10.9-5.1-4.3-8-10.6-7.8-17.3 0-4.6 1.4-9.2 4-13 3-4.3 7.1-7.7 12-9.6 5.3-2.3 12.7-3.5 22-3.5 11.4 0 20.1 2.1 26.1 6.4 6 4.2 9.6 11 10.7 20.3l-26 1.5c-.7-4-2.1-6.9-4.4-8.8s-5.3-2.8-9.2-2.8c-3.2 0-5.6.7-7.2 2-1.5 1.2-2.5 3-2.4 5 0 1.5.8 2.9 2 3.8 1.3 1.2 4.4 2.3 9.3 3.3 12.1 2.6 20.7 5.2 26 7.9 5.3 2.7 9.1 6 11.4 9.9 2.4 4 3.6 8.6 3.5 13.3 0 5.6-1.6 11.2-4.8 15.9-3.3 4.9-7.9 8.7-13.3 11-5.7 2.5-12.9 3.8-21.5 3.8-15.2 0-25.7-2.9-31.6-8.8S286.1 77 285.4 68zM6.3 97.6V8.2h46.1c8.5 0 15.1.7 19.6 2.2 4.4 1.4 8.3 4.3 10.9 8.2 2.9 4.3 4.3 9.3 4.2 14.5.3 8.8-4.2 17.2-11.9 21.6-3 1.7-6.3 2.9-9.7 3.5 2.5.7 5 1.9 7.2 3.3 1.7 1.4 3.1 3 4.4 4.7 1.5 1.7 2.8 3.6 3.9 5.6l13.4 25.9H63L48.2 70.2c-1.9-3.5-3.5-5.8-5-6.9-2-1.4-4.4-2.1-6.8-2.1H34v36.3H6.3zM34 44.4h11.7c2.5-.2 4.9-.6 7.3-1.2 1.8-.3 3.4-1.3 4.5-2.8 2.7-3.6 2.3-8.7-1-11.8-1.8-1.5-5.3-2.3-10.3-2.3H34v18.1zM0 174.2l26.3-1.7c.6 4.3 1.7 7.5 3.5 9.8 2.8 3.6 6.9 5.5 12.2 5.5 3.9 0 7-.9 9.1-2.8 2-1.6 3.2-3.9 3.2-6.4 0-2.4-1.1-4.7-3-6.2-2-1.8-6.7-3.6-14.2-5.2-12.1-2.7-20.8-6.3-25.9-10.9-5.1-4.3-8-10.6-7.8-17.3 0-4.6 1.4-9.2 4-13 3-4.3 7.1-7.7 12-9.6 5.3-2.3 12.7-3.5 22-3.5 11.4 0 20.1 2.1 26.1 6.4s9.5 11 10.6 20.3l-26 1.5c-.7-4-2.1-6.9-4.4-8.8-2.2-1.9-5.3-2.8-9.2-2.7-3.2 0-5.6.7-7.2 2.1-1.6 1.2-2.5 3-2.4 5 0 1.5.8 2.9 2 3.8 1.3 1.2 4.4 2.3 9.3 3.3 12.1 2.6 20.7 5.2 26 7.9 5.3 2.7 9.1 6 11.4 9.9 2.4 4 3.6 8.6 3.6 13.2 0 5.6-1.7 11.1-4.8 15.8-3.3 4.9-7.9 8.7-13.3 11-5.7 2.5-12.9 3.8-21.5 3.8-15.2 0-25.7-2.9-31.6-8.8-5.9-6-9.2-13.4-10-22.4z"/>
+            <path fill="#fd9f13"
+                  d="M133 167.2l24.2 7.3c-1.3 6.1-4 11.9-7.7 17-3.4 4.5-7.9 8-13 10.3-5.2 2.3-11.8 3.5-19.8 3.5-9.7 0-17.7-1.4-23.8-4.2-6.2-2.8-11.5-7.8-16-14.9-4.5-7.1-6.7-16.2-6.7-27.3 0-14.8 3.9-26.2 11.8-34.1s19-11.9 33.4-11.9c11.3 0 20.1 2.3 26.6 6.8 6.4 4.6 11.2 11.6 14.4 21l-24.4 5.4c-.6-2.1-1.5-4.2-2.7-6-1.5-2.1-3.4-3.7-5.7-4.9-2.3-1.2-4.9-1.7-7.5-1.7-6.3 0-11.1 2.5-14.4 7.6-2.5 3.7-3.8 9.6-3.8 17.6 0 9.9 1.5 16.7 4.5 20.4 3 3.7 7.2 5.5 12.7 5.5 5.3 0 9.3-1.5 12-4.4 2.7-3.1 4.7-7.4 5.9-13zm56.5-52.8h27.6v31.3h30.2v-31.3h27.8v89.4h-27.8v-36.2h-30.2v36.2h-27.6v-89.4z"/>
+            <path fill="#fd9f13"
+                  d="M271.3 159.1c0-14.6 4.1-26 12.2-34.1 8.1-8.1 19.5-12.2 34-12.2 14.9 0 26.3 4 34.4 12S364 144 364 158.4c0 10.5-1.8 19-5.3 25.7-3.4 6.6-8.7 12-15.2 15.6-6.7 3.7-15 5.6-24.9 5.6-10.1 0-18.4-1.6-25-4.8-6.8-3.4-12.4-8.7-16.1-15.2-4.1-7-6.2-15.7-6.2-26.2zm27.6.1c0 9 1.7 15.5 5 19.5 3.3 3.9 7.9 5.9 13.7 5.9 5.9 0 10.5-1.9 13.8-5.8s4.9-10.8 4.9-20.8c0-8.4-1.7-14.6-5.1-18.4-3.4-3.9-8-5.8-13.8-5.8-5.1-.2-10 2-13.4 5.9-3.4 3.9-5.1 10.4-5.1 19.5zm93.4-.1c0-14.6 4.1-26 12.2-34.1 8.1-8.1 19.5-12.2 34-12.2 14.9 0 26.4 4 34.4 12S485 144 485 158.4c0 10.5-1.8 19-5.3 25.7-3.4 6.6-8.7 12-15.2 15.6-6.7 3.7-15 5.6-24.9 5.6-10.1 0-18.4-1.6-25-4.8-6.8-3.4-12.4-8.7-16.1-15.2-4.1-7-6.2-15.7-6.2-26.2zm27.6.1c0 9 1.7 15.5 5 19.5 3.3 3.9 7.9 5.9 13.7 5.9 5.9 0 10.5-1.9 13.8-5.8 3.3-3.9 4.9-10.8 4.9-20.8 0-8.4-1.7-14.6-5.1-18.4-3.4-3.9-8-5.8-13.8-5.8-5.1-.2-10.1 2-13.4 5.9-3.4 3.9-5.1 10.4-5.1 19.5z"/>
+            <path fill="#fd9f13" d="M482.1 114.4h27.6v67.4h43.1v22H482v-89.4z"/>
+            <ellipse transform="rotate(-37.001 420.46 67.88)" class="st0" cx="420.5" cy="67.9" rx="63" ry="51.8"/>
+            <defs>
+                <ellipse id="SVGID_1_" transform="rotate(-37.001 420.46 67.88)" cx="420.5" cy="67.9" rx="63" ry="51.8"/>
+            </defs>
+            <clipPath id="SVGID_2_">
+                <use xlink:href="#SVGID_1_" overflow="visible"/>
+            </clipPath>
+            <g class="st1">
+                <path transform="rotate(-37.001 420.82 68.353)" class="st0" d="M330.9-14.2h179.8v165.1H330.9z"/>
+                <g id="Layer_2_1_">
+                    <defs>
+                        <path id="SVGID_3_" transform="rotate(-37.001 420.82 68.353)"
+                              d="M330.9-14.2h179.8v165.1H330.9z"/>
+                    </defs>
+                    <clipPath id="SVGID_4_">
+                        <use xlink:href="#SVGID_3_" overflow="visible"/>
+                    </clipPath>
+                    <g id="Layer_1-2" class="st2">
+                        <ellipse transform="rotate(-37.001 420.46 67.88)" class="st0" cx="420.5" cy="67.9" rx="63"
+                                 ry="51.8"/>
+                        <defs>
+                            <ellipse id="SVGID_5_" transform="rotate(-37.001 420.46 67.88)" cx="420.5" cy="67.9" rx="63"
+                                     ry="51.8"/>
+                        </defs>
+                        <clipPath id="SVGID_6_">
+                            <use xlink:href="#SVGID_5_" overflow="visible"/>
+                        </clipPath>
+                        <g class="st3">
+                            <path transform="rotate(-37 420.799 68.802)" class="st0" d="M357.8 17h125.9v103.7H357.8z"/>
+                            <defs>
+                                <path id="SVGID_7_" transform="rotate(-37 420.799 68.802)"
+                                      d="M357.8 17h125.9v103.7H357.8z"/>
+                            </defs>
+                            <clipPath id="SVGID_8_">
+                                <use xlink:href="#SVGID_7_" overflow="visible"/>
+                            </clipPath>
+                            <g class="st4">
+                                <ellipse transform="rotate(-37.001 420.46 67.88)" class="st5" cx="420.5" cy="67.9"
+                                         rx="63" ry="51.8"/>
+                            </g>
+                            <path transform="rotate(-37 420.799 68.802)" class="st6" d="M357.8 17h125.9v103.7H357.8z"/>
+                            <ellipse transform="rotate(-37.001 420.46 67.88)" class="st7" cx="420.5" cy="67.9" rx="63"
+                                     ry="51.8"/>
+                            <path transform="rotate(-37 420.799 68.802)" class="st0" d="M357.8 17h125.9v103.7H357.8z"/>
+                            <defs>
+                                <path id="SVGID_9_" transform="rotate(-37 420.799 68.802)"
+                                      d="M357.8 17h125.9v103.7H357.8z"/>
+                            </defs>
+                            <clipPath id="SVGID_10_">
+                                <use xlink:href="#SVGID_9_" overflow="visible"/>
+                            </clipPath>
+                            <g class="st8">
+                                <ellipse transform="rotate(-37.001 420.46 67.88)" class="st5" cx="420.5" cy="67.9"
+                                         rx="63" ry="51.8"/>
+                            </g>
+                            <path transform="rotate(-37 420.799 68.802)" class="st9" d="M357.8 17h125.9v103.7H357.8z"/>
+                            <path transform="rotate(-37.001 420.82 68.353)" class="st7"
+                                  d="M330.9-14.2h179.8v165.1H330.9z"/>
+                        </g>
+                        <ellipse transform="rotate(-37.001 420.46 67.88)" class="st7" cx="420.5" cy="67.9" rx="63"
+                                 ry="51.8"/>
+                        <path d="M392.4 61.3l10-7 12.3 17.5c2.1 2.8 3.7 5.8 4.9 9.1.7 2.5.5 5.2-.5 7.6-1.3 3-3.4 5.5-6.2 7.3-3.3 2.3-6.1 3.6-8.5 4-2.3.4-4.7 0-6.9-1-2.4-1.2-4.5-2.9-6.1-5.1l8.6-8c.7 1.1 1.6 2.1 2.6 2.9.7.5 1.5.8 2.4.8.7 0 1.4-.3 1.9-.7 1-.6 1.7-1.8 1.6-3-.3-1.7-1-3.4-2.1-4.7l-14-19.7zm30 11.1l9.1-7.2c1 1.2 2.3 2.1 3.7 2.6 2 .6 4.1.2 5.8-1.1 1.2-.8 2.2-1.9 2.6-3.3.6-1.8-.4-3.8-2.2-4.4-.3-.1-.6-.2-.9-.2-1.2-.1-3.3.4-6.4 1.7-5.1 2.1-9.1 2.9-12.1 2.6-2.9-.3-5.6-1.8-7.2-4.3-1.2-1.7-1.8-3.7-1.9-5.7 0-2.3.6-4.6 1.9-6.5 1.9-2.7 4.2-5 7-6.8 4.2-2.9 7.9-4.3 11.1-4.3 3.2 0 6.2 1.5 9 4.6l-9 7.1c-1.8-2.3-5.2-2.8-7.5-1l-.3.3c-1 .6-1.7 1.5-2.1 2.6-.3.8-.1 1.7.4 2.4.4.5 1 .9 1.7.9.8.1 2.2-.3 4.2-1.2 5-2.1 8.8-3.3 11.4-3.7 2.2-.4 4.5-.2 6.6.7 1.9.8 3.5 2.2 4.6 3.9 1.4 2 2.2 4.4 2.3 6.9.1 2.6-.6 5.1-2 7.3-1.8 2.7-4.1 5-6.8 6.8-5.5 3.8-10 5.4-13.6 4.8-3.9-.6-7.1-2.6-9.4-5.5z"/>
+                    </g>
+                </g>
+            </g>
+        </svg>
+    </a>
+</footer>
 </body>
 </html>
